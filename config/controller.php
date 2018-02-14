@@ -1,8 +1,10 @@
 <?php
 
-class controller {
+class ControllerConfig {
 
 	public function __construct(){
+
+		$controller = new Controller;
 
 		if(!isset($_GET['url'])){
 			header('location: index.php?url=index');
@@ -24,7 +26,8 @@ class controller {
 			$url[0] = 'error404';
 		}
 
-		$controller = new $url[0];
+		$controllername = $url[0].'_Controller';
+		$controller = new $controllername;
 
 		if(isset($url[1])){
 			if(isset($_GET)){
@@ -32,6 +35,9 @@ class controller {
 			}else{
 				$methodname = 'post_'.$url[1];
 			}
+		}else{
+			$methodname = 'get_'.$url[0];
+			$controller->{$methodname}();
 		}
 
 		if(isset($url[2])){

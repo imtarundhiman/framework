@@ -1,9 +1,13 @@
 <?php 
 
-class Index {
+class Index_Controller extends Controller{
 
 	public function __construct(){
-		echo 'i am in index controller';
+		parent::__construct();
+	}
+
+	public function get_index(){
+		$this->view->render('/index');
 	}
 
 	public function get_abc($args = false){

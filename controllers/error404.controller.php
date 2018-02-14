@@ -1,9 +1,14 @@
 <?php 
 
 
-class error404{
+class Error404_Controller extends Controller{
 
-	 public function __construct(){
-	 	echo 'The webpage you are looking for, not exists';
-	 } 
+	public function __construct(){
+		parent::__construct();
+	} 
+
+
+	public function get_error404(){
+		$this->view->render('/404');
+	}
 }
