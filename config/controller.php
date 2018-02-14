@@ -6,11 +6,11 @@ class ControllerConfig {
 
 		$controller = new Controller;
 
-		if(!isset($_GET['url'])){
-			//header('location: index.php?url=index');
-		}
+		//$url = rtrim($_GET['url'], '/');
 
-		$url = rtrim($_GET['url'], '/');
+		$url = isset($_SERVER['PATH_INFO']) ? ltrim($_SERVER['PATH_INFO'], '/') : 'index' ;
+		$url = rtrim($url, '/');
+
 		$url = explode('/', $url);
 
 		if(!isset($url[0]) || !strlen($url[0])){

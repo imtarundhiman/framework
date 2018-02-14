@@ -11,7 +11,6 @@ class Index_Controller extends Controller{
 	}
 
 	public function get_abc($args = false){
-		print_r($_GET);
 		echo 'i am in abc method';
 		echo $args;
 	}
