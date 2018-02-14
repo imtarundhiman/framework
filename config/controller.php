@@ -9,8 +9,6 @@ class ControllerConfig {
 		$url = isset($_SERVER['REQUEST_URI']) ? ltrim($_SERVER['REQUEST_URI'], '/') : 'index' ;
 		$url = rtrim($url, '/');
 
-		echo $url;
-
 		$url = explode('/', $url);
 
 		if(!isset($url[0]) || !strlen($url[0])){

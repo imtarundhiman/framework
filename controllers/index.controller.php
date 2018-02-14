@@ -7,6 +7,7 @@ class Index_Controller extends Controller{
 	}
 
 	public function get_index(){
+		print_r($_GET);
 		$this->view->render('/index');
 	}
 
