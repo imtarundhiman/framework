@@ -6,8 +6,12 @@ class ControllerConfig {
 
 		$controller = new Controller;
 
+		print_r($_SERVER); die;
+
 		$url = isset($_SERVER['REQUEST_URI']) ? ltrim($_SERVER['REQUEST_URI'], '/') : 'index' ;
 		$url = rtrim($url, '/');
+
+		echo $url;
 
 		$url = explode('/', $url);
 
