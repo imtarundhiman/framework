@@ -12,7 +12,7 @@ class ControllerConfig {
 		$url = isset($_GET['url']) ? ltrim($_GET['url'], '/') : 'index' ;
 		$url = rtrim($url, '/');
 
-		dd($url);
+		echo $url;
 
 		$url = explode('/', $url);
 
