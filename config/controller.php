@@ -7,7 +7,7 @@ class ControllerConfig {
 		$controller = new Controller;
 
 		if(!isset($_GET['url'])){
-			header('location: index.php?url=index');
+			//header('location: index.php?url=index');
 		}
 
 		$url = rtrim($_GET['url'], '/');
