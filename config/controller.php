@@ -5,7 +5,7 @@ class controller {
 	public function __construct(){
 
 		if(!isset($_GET['url'])){
-			header('location: index.php?url=index');
+			//header('location: index.php?url=index');
 		}
 
 		$url = rtrim($_GET['url'], '/');
