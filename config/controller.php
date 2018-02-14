@@ -8,7 +8,7 @@ class ControllerConfig {
 
 		//$url = rtrim($_GET['url'], '/');
 
-		$url = isset($_SERVER['PATH_INFO']) ? ltrim($_SERVER['PATH_INFO'], '/') : 'index' ;
+		$url = isset($_GET['url']) ? ltrim($_GET['url'], '/') : 'index' ;
 		$url = rtrim($url, '/');
 
 		$url = explode('/', $url);
